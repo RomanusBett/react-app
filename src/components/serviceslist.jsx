@@ -1,36 +1,14 @@
 import React from "react";
 import Carousel from "react-material-ui-carousel";
 import {Box, Button, Typography, Container, createTheme, ThemeProvider} from '@mui/material'
+import { theme } from "./homebody";
 
-
-const theme= createTheme({
-  palette: {
-      background:{
-          paper: 'fff',
-          light: '#ffac33',
-          main: '#007bb2',
-          dark: '#03002E',
-          contrastText: '#cfd8dc',
-      },
-      text: {
-          primary: '#173A5E',
-          secondary: '#46505A',
-          light: '#ffac33',
-          main: '#f44336',
-          dark: '#ba000d',
-          contrastText: '#fff',
-      }        
-  },
-  typography:{
-      fontFamily:'"Roboto", "Helvetica", "Arial", sans-serif'
-  },
-});
 function Item({ item }: { item: { description: string } }) {
   return (
       <ThemeProvider theme={theme}>
       <Container maxWidth='md'>
       <Box sx={{
-          height: 200
+          height: 200,
       }}><Typography variant='h4'>{item.heading}</Typography>
       <Typography variant='h6' sx={{mb: 10}}>{item.description}</Typography></Box>
       </Container>
@@ -42,29 +20,17 @@ function Item({ item }: { item: { description: string } }) {
 export default function Service() {
   const items = [
     {
-        heading: "Alternator replacement",
+        heading: "ALTERNATOR REPLACEMENT",
         description:"Get a Better Deal on Bulk Car Alternator Replacement. Find the Right Car Alternator Replacement Manufacturer near you."
         },
-        {heading: "battery replacement",
-         description:"Chloride and Exide Car Battery Replacement Services. Car battery replacement service near you. Book our car battery replacement service at your doorstep."
+        {heading: "TOWING SERVICE",
+         description:"  Moving? Car Failure? Worry no more! Haul your car to any destination from any location"
         },
-        {heading: "leaking raditor replacement",
-         description:"We do Complete Assembly, Re-coring, Re-conditioning, Repair & Sevicing of both metallic and plastic radiators. Repair, Service and maintainance majorly entails routine checkup and replacement"
+        {heading: "ORDER PARTS",
+         description:"Need parts, Order now from our site. We offer genuine parts at affordable rates"
         },
-        {heading: "Towing service and instant diagnosis",
-         description:"We provide towing services in Kenya, 24 hours, 7 days a week tow truck services in Nairobi and all the surrounding counties"
-        },
-        {heading: "Brake pad change",
-         description:"Visit Zuzu Lube for brake maintenance services, brake repair, and/or pad replacement We'll show Zuzu Lube locations closest to you"
-        },
-        {heading: "car not starting",
-         description:"If your vehicle won't start, it's usually caused by a dying or dead battery, loose or corroded connection cables, a bad alternator or an issue with the starter. we replace and fix all issues associated"
-        },
-        {heading: "Oil Filter and oil change",
-         description:"Zuzu Kenya provides oil services for cars, this includes; replacement of engine oil and oil filter. visit us today for a quick fix"
-        },
-        {heading: "Fuel pump change and fixation",
-         description:"Get your car's fuel pump replaced at the convenience of your location. At Zuzu we provide quality parts & services."
+        {heading: "OTHER SERVICES",
+         description:"Need other quick fixes? Send us a quick description of the problem and we will be right on it"
         }
   ];
 
@@ -76,7 +42,7 @@ export default function Service() {
   };
 
   return (
-    <div>
+    <Box sx={{}}>
       <Carousel
         index={index}
         onChange={handleChange}
@@ -86,6 +52,7 @@ export default function Service() {
         stopAutoPlayOnHover
         swipe
         className="my-carousel"
+        sx={{mb:20}}
       >
         {items.map((item, i) => (
           <Item key={i} item={item} />
@@ -95,7 +62,6 @@ export default function Service() {
         <Button
           size='small'
           sx={{
-              mt: 6,
               pt:0,
           }}
           onClick={() => setIndex(i)}
@@ -104,7 +70,7 @@ export default function Service() {
           {i}
         </Button>
       ))}
-    </div>
+    </Box>
   );
 }
 

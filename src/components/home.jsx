@@ -8,7 +8,6 @@ import Footer from './Footer';
 const Home = ()=>{
     return(
         <>
-        {/* This is the Toolbar */}
         <CssBaseline />
   
         <main>

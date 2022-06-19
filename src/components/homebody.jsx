@@ -4,6 +4,8 @@ import Service from './serviceslist';
 import MiscellaneousServicesIcon from '@mui/icons-material/MiscellaneousServices';
 import { Link } from 'react-router-dom';
 import CarRepairIcon from '@mui/icons-material/CarRepair';
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import Navigation from './Navigation';
 
 
 const theme= createTheme({
@@ -33,18 +35,24 @@ const HomeBody = ()=>{
     return(
         <ThemeProvider theme = {theme}>
         <div className='main_container'>
+        <div className='mainContainerFilter'>
+
         <Box 
         sx={{
             fontFamily:'theme.typography.fontFamily.Arial',
             pt:0,
             minWidth: '100%',
-            height: '100vh'
+            height: '100vh',
 
         }}>
-      <AppBar position='relative'>
+      <AppBar position='absolute'>
         <Toolbar sx={{
-            bgcolor:'background.dark'
+            bgcolor:'background.dark',
+            position: 'fixed',
+            width: '100%'
         }}>
+        <div className='big-container'>
+        <div className='logoContainer'>
         <Typography variant='h6' sx={{
             display:'flex',
             color:'background.light'
@@ -55,19 +63,27 @@ const HomeBody = ()=>{
             mr:0.5,
             color:'background.light'
              }}/>
-        carMATE
+        CarMATE
         </Typography>
+        </div>
+        <div>
+
+
+       <Navigation />
+      
+        </div>
+        </div>
         </Toolbar>
+
 
         </AppBar>
 
-        <Container maxWidth='md' sx={{ width: 1, height: 1, pt:20}}>
+        <Container maxWidth='md' sx={{ width: 1, height: 1, pt:20 }}>
         <Typography component='h1' variant='h3' align='center' sx={{fontWeight:'bold', color:'text.light'}} gutterBottom>
-        carMATE
+        CarMATE
         </Typography>
         <Typography variant='h5' align='center' sx={{color:'text.contrastText'}}  paragraph>
-        stuck? We offer towing services around the country. On click of a button one of our mechanics will be with you.
-        We also sell genuine automotive parts at affordable rates.
+        stuck? Need remote repairs? Parts replacement? Diagnostics? Our mechanics are up to task always and everywhere at your request. 
         </Typography>
         <Stack sx={{pt:12}}
         direction='row'
@@ -84,6 +100,7 @@ const HomeBody = ()=>{
 
         </Container>
         </Box>
+        </div>
 
         <Box sx={{
             bgcolor:'background.contrastText',
@@ -106,9 +123,16 @@ const HomeBody = ()=>{
         
         </Box>
         </div>
+        <div className='contactContainer'>
+        <Typography variant='body2' sx={{color:"background.light",}}> 
+        <LocalPhoneIcon />
+        +254XXX XXX XXX
+        </Typography>
+        </div>
         </ThemeProvider>
  
     )
 }
 
 export default HomeBody;
+export {theme};
