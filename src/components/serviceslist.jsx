@@ -1,6 +1,6 @@
 import React from "react";
 import Carousel from "react-material-ui-carousel";
-import {Box, Button, Typography, Container, createTheme, ThemeProvider} from '@mui/material'
+import {Box, Button, Typography, Container, ThemeProvider} from '@mui/material'
 import { theme } from "./homebody";
 
 function Item({ item }: { item: { description: string } }) {
