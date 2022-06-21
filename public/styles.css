@@ -8,6 +8,31 @@
     height: 100%;
 
 }
+.MiscellaneousContainer{
+    background-color: #03002E ;
+    height: 110vh;
+    width: 100%;
+    transform: skewY(9deg);
+    color: white;
+
+}
+.carouselContainerInfo{
+    transform: skewY(-9deg);
+}
+.choiceContainerInfo{
+    padding-top: 5rem;
+}
+
+.informationContainer{
+    height: 100vh;
+    width: 100%;
+}
+.rotatedContentContainer{
+    transform: skewY(-9deg);
+}
+.bodyContainer{
+    padding-top: 10rem;
+}
 .big-container{
     display: flex;
     justify-content: space-between;
@@ -17,6 +42,15 @@
 .navigate{
     color: #ffac33;
     
+}
+.choiceHeading{
+    background-color: #f36b2a;
+}
+.carouselContainer{
+    background-color: #f36b2a;
+    transform: skewY(9deg);
+    height: 110vh;
+    width: 100%;
 }
 .navigate ul{
     display: flex;
@@ -54,4 +88,11 @@ li{
 .navigate li{
     color: #03002E;
 }
+}
+
+@media (max-width: 300px){
+    .bodyContainer{
+        padding-top: 7rem;
+    }
+
 }

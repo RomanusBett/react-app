@@ -1,17 +1,18 @@
 import React from 'react';
-import {Stack,AppBar, Toolbar,  createTheme, Box, Typography, Container, Button, ThemeProvider} from '@mui/material';
+import {Stack,AppBar, Toolbar,  createTheme, Box, Typography, Button, ThemeProvider} from '@mui/material';
 import Service from './serviceslist';
 import MiscellaneousServicesIcon from '@mui/icons-material/MiscellaneousServices';
 import { Link } from 'react-router-dom';
 import CarRepairIcon from '@mui/icons-material/CarRepair';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import Navigation from './Navigation';
-
+import Information from './imformation';
+import Choice from './choice';
 
 const theme= createTheme({
     palette: {
         background:{
-            paper: 'fff',
+            paper: '#F9F9F9',
             light: '#ffac33',
             main: '#007bb2',
             dark: '#03002E',
@@ -78,12 +79,12 @@ const HomeBody = ()=>{
 
         </AppBar>
 
-        <Container maxWidth='md' sx={{ width: 1, height: 1, pt:20 }}>
-        <Typography component='h1' variant='h3' align='center' sx={{fontWeight:'bold', color:'text.light'}} gutterBottom>
-        CarMATE
+        <div className='bodyContainer'>
+        <Typography component='h1' variant='h4' align='center' sx={{fontWeight:'bold', color:'text.light'}} gutterBottom>
+        GET YOUR CAR RUNNING!
         </Typography>
         <Typography variant='h5' align='center' sx={{color:'text.contrastText'}}  paragraph>
-        stuck? Need remote repairs? Parts replacement? Diagnostics? Our mechanics are up to task always and everywhere at your request. 
+            Stuck? Need remote repairs? Parts replacement? Diagnostics? <br />Our mechanics are up to task always and everywhere at your request. 
         </Typography>
         <Stack sx={{pt:12}}
         direction='row'
@@ -98,37 +99,45 @@ const HomeBody = ()=>{
 
         </Stack>
 
-        </Container>
+        </div>
         </Box>
+        </div>
         </div>
 
-        <Box sx={{
-            bgcolor:'background.contrastText',
-            pt:5,
-            pb:3
-        }}>
-        <Container align='center' sx={{
-            
-        }}>
-        <Typography variant='h5' sx={{mb: 2, fontWeight:'bold', pt:2}}>
-        <MiscellaneousServicesIcon fontSize='medium' color='string'/>
-        Services we offer
-        </Typography>
-        <Box sx={{pt:5}}>
-        <Typography>
-         <Service />
-        </Typography>
-        </Box>
-        </Container>
         
-        </Box>
+        <div>  
+        <Information /> 
         </div>
+        
+
+        <div className='MiscellaneousContainer'>
+        <div className='rotatedContentContainer'>
+        <Choice />
+
+        </div>
+  
+        </div> 
+        <div className='carouselContainer'>
+        <div className='carouselContainerInfo'>
+
+        <MiscellaneousServicesIcon fontSize='medium' color='background.paper'/>
+        Services we offer
+      
+            
+        <Service />
         <div className='contactContainer'>
-        <Typography variant='body2' sx={{color:"background.light",}}> 
+        <Typography variant='body2' sx={{color:"background.paper",}}> 
         <LocalPhoneIcon />
         +254XXX XXX XXX
         </Typography>
+        </div> 
         </div>
+
+      
+        </div>
+   
+
+
         </ThemeProvider>
  
     )

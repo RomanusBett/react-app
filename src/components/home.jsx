@@ -9,7 +9,6 @@ const Home = ()=>{
     return(
         <>
         <CssBaseline />
-  
         <main>
         <HomeBody />
         </main>

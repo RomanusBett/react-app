@@ -9,8 +9,8 @@ function Item({ item }: { item: { description: string } }) {
       <Container maxWidth='md'>
       <Box sx={{
           height: 200,
-      }}><Typography variant='h4'>{item.heading}</Typography>
-      <Typography variant='h6' sx={{mb: 10}}>{item.description}</Typography></Box>
+      }}><Typography variant='h4' sx={{color: 'background.paper'}}>{item.heading}</Typography>
+      <Typography variant='h6' sx={{mb: 10, color: 'background.paper' }}>{item.description}</Typography></Box>
       </Container>
      </ThemeProvider>
      
