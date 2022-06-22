@@ -1,17 +1,15 @@
 import React from "react";
 import Carousel from "react-material-ui-carousel";
-import {Box, Button, Typography, Container, ThemeProvider} from '@mui/material'
+import {Button, Typography, ThemeProvider} from '@mui/material'
 import { theme } from "./homebody";
 
 function Item({ item }: { item: { description: string } }) {
   return (
       <ThemeProvider theme={theme}>
-      <Container maxWidth='md'>
-      <Box sx={{
-          height: 200,
-      }}><Typography variant='h4' sx={{color: 'background.paper'}}>{item.heading}</Typography>
-      <Typography variant='h6' sx={{mb: 10, color: 'background.paper' }}>{item.description}</Typography></Box>
-      </Container>
+      <div className="typographyContainer">
+      <Typography variant='h4' sx={{color: 'background.dark', fontWeight: 'bold',}}>{item.heading}</Typography>
+      <Typography variant='h6' sx={{mb: 10, color: 'background.dark', }}>{item.description}</Typography>
+      </div>
      </ThemeProvider>
      
   );
@@ -42,7 +40,7 @@ export default function Service() {
   };
 
   return (
-    <Box sx={{}}>
+    <div>
       <Carousel
         index={index}
         onChange={handleChange}
@@ -52,7 +50,9 @@ export default function Service() {
         stopAutoPlayOnHover
         swipe
         className="my-carousel"
-        sx={{mb:20}}
+        sx={{
+          width:'100%',
+        }}
       >
         {items.map((item, i) => (
           <Item key={i} item={item} />
@@ -63,14 +63,14 @@ export default function Service() {
           size='small'
           sx={{
               pt:0,
+              mr:2,
           }}
           onClick={() => setIndex(i)}
           style={{ background: i === index ? "#ccc" : "#cfd8dc" }}
         >
-          {i}
         </Button>
       ))}
-    </Box>
+    </div>
   );
 }
 

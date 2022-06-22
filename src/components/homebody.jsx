@@ -1,13 +1,13 @@
 import React from 'react';
 import {Stack,AppBar, Toolbar,  createTheme, Box, Typography, Button, ThemeProvider} from '@mui/material';
 import Service from './serviceslist';
-import MiscellaneousServicesIcon from '@mui/icons-material/MiscellaneousServices';
 import { Link } from 'react-router-dom';
 import CarRepairIcon from '@mui/icons-material/CarRepair';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import Navigation from './Navigation';
 import Information from './imformation';
 import Choice from './choice';
+import BuildIcon from '@mui/icons-material/Build';
 
 const theme= createTheme({
     palette: {
@@ -120,11 +120,24 @@ const HomeBody = ()=>{
         <div className='carouselContainer'>
         <div className='carouselContainerInfo'>
 
-        <MiscellaneousServicesIcon fontSize='medium' color='background.paper'/>
-        Services we offer
-      
-            
+        <div className='mainServiceOfferedContainer'>
+        <div className='servicesOfferedContainer'>
+            <h4>SERVICES WE OFFER</h4>
+        </div>
+        </div>
+
+        <div className='mainBuildIconContainer'>
+        <div className='buildIconContainer'>
+        <BuildIcon sx={{color:'background.dark', fontSize:'60px'}}/>
+        </div>
+        </div>
+    
+           
+
+        <div className='carouselInformationContainer'>
         <Service />
+
+        </div>  
         <div className='contactContainer'>
         <Typography variant='body2' sx={{color:"background.paper",}}> 
         <LocalPhoneIcon />

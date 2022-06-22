@@ -3,10 +3,12 @@ import React from "react";
 const Choice = ()=>{
     return(
         <div className='choiceContainerInfo'>
-         <div className="choiceHeading">
+        <div className="mainChoiceHeader">
+        <div className="choiceHeading">
             <h1>Why Choose Us?</h1>
          </div>
-         <div>
+        </div>
+         <div className="choiceChildren">
           <div>
             logo
             <h4>FINANCING MADE</h4>
