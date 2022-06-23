@@ -8,6 +8,9 @@
     height: 100%;
 
 }
+.contactContainer{
+    padding-top: 10rem;
+}
 .MiscellaneousContainer{
     background-color: #03002E ;
     height: 100vh;
@@ -63,6 +66,12 @@
     color: #ffac33;
     
 }
+.otherServiceContainer{
+    height: 150vh;
+    width: 100%;
+    background-color: #03002E;
+    margin-top: -10rem;
+}
 .buildIconContainer{
     border-radius: 50px;
     border: 2px solid #03002E;
@@ -81,6 +90,14 @@
     align-items: center;
     justify-content: center;
     border-radius: 10px;
+    margin-top: -2rem;
+    z-index: -1;
+    border: 1px solid #03002E;
+}
+.mainCarouselContainerInfo{
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 .mainBuildIconContainer{
@@ -154,6 +171,9 @@ li{
 
 
 }
+.carouselInformationContainer{
+    padding-top: 5rem;
+}
 .navigate li{
     color: #03002E;
 }
@@ -170,6 +190,7 @@ li{
 .MiscellaneousContainer{
     height: 150vh;
 }
+
 }
 
 @media (max-width: 300px){

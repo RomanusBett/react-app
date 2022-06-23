@@ -8,6 +8,8 @@ import Navigation from './Navigation';
 import Information from './imformation';
 import Choice from './choice';
 import BuildIcon from '@mui/icons-material/Build';
+import OtherService from './otherService';
+import Contact from './contact';
 
 const theme= createTheme({
     palette: {
@@ -115,7 +117,6 @@ const HomeBody = ()=>{
         <Choice />
 
         </div>
-  
         </div> 
         <div className='carouselContainer'>
         <div className='carouselContainerInfo'>
@@ -133,20 +134,27 @@ const HomeBody = ()=>{
         </div>
     
            
-
+        <div className='mainCarouselContainerInfo'>
         <div className='carouselInformationContainer'>
         <Service />
-
         </div>  
+        </div>
+
+     
+     
+        </div>
+
+      
+        </div>
+        <div className='otherServiceContainer'>
         <div className='contactContainer'>
         <Typography variant='body2' sx={{color:"background.paper",}}> 
         <LocalPhoneIcon />
         +254XXX XXX XXX
         </Typography>
         </div> 
-        </div>
-
-      
+        <OtherService />
+        <Contact />
         </div>
    
 
