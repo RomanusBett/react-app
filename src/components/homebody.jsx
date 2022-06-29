@@ -52,7 +52,9 @@ const HomeBody = ()=>{
         <Toolbar sx={{
             bgcolor:'background.dark',
             position: 'fixed',
-            width: '100%'
+            width: '100%',
+            height: 36,
+            borderBottom: '1px solid black',
         }}>
         <div className='big-container'>
         <div className='logoContainer'>

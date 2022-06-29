@@ -20,6 +20,11 @@
     
 
 }
+
+
+.MiscellaneousContainer p{
+  margin: 0px;
+}
 .carouselContainerInfo{
     transform: skewY(-9deg);
     width: 100%;
@@ -31,7 +36,7 @@
 .choiceHeading{
     background-color: #F77E21;
     width: 19rem;
-    height: 5rem;
+    height: 3.5rem;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -47,8 +52,11 @@
     display: flex;
 }
 .informationContainer{
-    height: 100vh;
+    height: 120vh;
     width: 100%;
+}
+.muiIconsContainer{
+    border-bottom: 0;
 }
 .rotatedContentContainer{
     transform: skewY(-9deg);
@@ -65,6 +73,58 @@
 .navigate{
     color: #ffac33;
     
+}
+.functionalContainer{
+    padding: 1.2rem;
+}
+.muiIconsContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.thisFunctionServiceContainer{
+    margin-left: 20px;
+}
+.functionServiceContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 10rem auto;
+}
+.functionServiceContainer h1{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: 000000;
+}
+.functionServiceContainer p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.secondImageContainer{
+    width: 50%;
+}
+.firstserviceImage{
+    width: 80%;
+    height: 80%;
+}
+.secondServiceImage{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.informationSecondContainer{
+    align-items: left;
+    width: 100%;
+     padding-left: 2rem;  
+}
+.informationFunctionContainer{
+    align-items: left;
+    width: 100%;
+    padding-right: 2rem;
+}
+.muiIconsContainer h3{ 
+   font-family: 'Montserrat', sans-serif;
+   font-size: 1.5rem;
 }
 .otherServiceContainer{
     height: 150vh;
@@ -115,6 +175,11 @@
     width: 20rem;
     border-radius: 10px;
 }
+.MiscellaneousContainer p{
+    font-family: 'poppins', sans-serif;
+    font-size: 1.1rem;
+    opacity: 0.7;
+}
 .mainServiceOfferedContainer{
     display: flex;
     align-items: center;
@@ -157,7 +222,52 @@ li{
 
 
 @media (max-width: 768px){
+.functionServiceContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 10rem auto;
+    
+}
+.informationFunctionContainer{
+    align-items: center;
+    width: 100%;
+    padding-left: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.informationFunctionContainer h1{
+    text-align: center;
+}
+.muiIconsContainer h3{
+    text-align: center;
+}
 
+.secondImageContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.informationSecondContainer{
+    margin-top: -8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.informationSecondContainer h1{
+    margin-left: -15%;
+}
+.firstserviceImage{
+    width: 70%;
+    height: 70%;
+    margin-bottom: 2rem;
+}
 .navigate ul{
     display: none;
     flex-flow: column nowrap;
@@ -170,6 +280,9 @@ li{
     padding-top: 3.5rem;
 
 
+}
+.functionalContainer p{
+    text-align: center
 }
 .carouselInformationContainer{
     padding-top: 5rem;
@@ -186,9 +299,11 @@ li{
     margin-bottom: 2rem;
     
 }
-
+.informationContainer{
+    height: 140vh;
+}
 .MiscellaneousContainer{
-    height: 150vh;
+    height: 200vh;
 }
 
 }
@@ -196,6 +311,9 @@ li{
 @media (max-width: 300px){
     .bodyContainer{
         padding-top: 7rem;
+    }
+    .MiscellaneousContainer{
+        height: 220vh;
     }
 
 }

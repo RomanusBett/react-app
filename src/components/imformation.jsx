@@ -3,22 +3,44 @@ import React from "react";
 const Information = ()=>{
     return(
         <div className="informationContainer">
+        <div className="functionServiceContainer">
+        <div className="secondImageContainer">
+            <img className="firstserviceImage" src="https://n7autorepairs.ie/wp-content/uploads/2020/02/376-3768572_mechanical-clipart-car-repair-shop-car-mechanic-clipart.png" alt=""/>
+        </div>
         <div>
+
+        <div className="informationFunctionContainer">
         <h1>
-            Vehicle repair
+             VEHICLE REPAIR
         </h1>
+
         <p>
-            "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati "
+        We strive to keep you in motion any day, everywhere. One of our qualified mechanics <br/>will get in touch with you immediately.
         </p>
         </div>
+        </div>
+        </div>
+
+
+
+
+        <div className="functionServiceContainer">
 
         <div>
+
+        <div className="informationSecondContainer">
         <h1>
-            About Us
+        ABOUT US
         </h1>
+
         <p>
-        Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae.
-        </p>
+        CARMATE is dedicated to ensuring all car owners never experience a dull day in their ownership period.<br/> From timely repair of your
+        vehicle and easy vehicle parts sourcing to towing your car.          </p>
+        </div>
+        </div>
+        <div className="secondImageContainer">
+            <img className="secondServiceImage" src="https://cdnwebsite.databox.com/wp-content/uploads/2020/12/01062702/about-us-page-examples.png" alt=""/>
+        </div>
         </div>
      
         </div>
