@@ -1,15 +1,16 @@
 import React from 'react';
 import {Stack,AppBar, Toolbar,  createTheme, Box, Typography, Button, ThemeProvider} from '@mui/material';
-import Service from './serviceslist';
 import { Link } from 'react-router-dom';
 import CarRepairIcon from '@mui/icons-material/CarRepair';
-import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import Navigation from './Navigation';
 import Information from './imformation';
 import Choice from './choice';
 import BuildIcon from '@mui/icons-material/Build';
 import OtherService from './otherService';
 import Contact from './contact';
+import ContactUs from './contactUs';
+import Socials from './socials';
+import Mycarousel from './carousel'
 
 const theme= createTheme({
     palette: {
@@ -137,9 +138,12 @@ const HomeBody = ()=>{
     
            
         <div className='mainCarouselContainerInfo'>
+               
         <div className='carouselInformationContainer'>
-        <Service />
-        </div>  
+        <Mycarousel />
+        </div>
+
+
         </div>
 
      
@@ -150,16 +154,12 @@ const HomeBody = ()=>{
         </div>
         <div className='otherServiceContainer'>
         <div className='contactContainer'>
-        <Typography variant='body2' sx={{color:"background.paper",}}> 
-        <LocalPhoneIcon />
-        +254XXX XXX XXX
-        </Typography>
+        <ContactUs />
         </div> 
         <OtherService />
         <Contact />
         </div>
-   
-
+        <Socials />
 
         </ThemeProvider>
  
