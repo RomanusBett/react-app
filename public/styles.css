@@ -20,6 +20,11 @@
     
 
 }
+.socailsContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
 .MiscellaneousContainer p{
@@ -127,7 +132,7 @@
    font-size: 1.5rem;
 }
 .otherServiceContainer{
-    height: 150vh;
+    height: 100vh;
     width: 100%;
     background-color: #03002E;
     margin-top: -10rem;
@@ -194,6 +199,19 @@
     justify-content: center;
     width: 100%;
 }
+.carousel-wrapper{
+    width: 100%;
+    color: #03002E;
+}
+.carousel-Information h1{
+    color: #03002E;
+}
+.carousel-Information p{
+    color: #03002E;
+}
+.carousel .control-dots{
+    opacity: 0;
+}
 .carouselContainer{
     background-color: #F77E21;
     transform: skewY(9deg);
@@ -218,9 +236,85 @@
 li{
   color: #ffac33;
 }
+.contactHeadingContainer{
+   background-color: #F77E21;
+   color: white;
+   width: 14rem;
+   text-align: center;
+   border-radius: 5px;
+   height: 3rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 4rem;
+}
+.contactUsContentContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 3rem;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5px;
+}
+textarea{
+    height: 111px;
+}
+.contactHeadingContainer h1{
+    font-weight: bold;
+    font-size: 30px;
+}
+.contactUsContentContainer{
+    display: flex;
+    justify-content: right;
+}
+.contactFormContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
 
+.contactDetails{
+    color: white;
+    width: 100%;
+    margin-left: 20px;
 
+}
+.contactInput{
+    width: 90%;
+    background-color: #f8f8f8;
+    border: 2px solid #ccc;
+    margin: 5px auto;
+    border-radius: 5px;
+    height: 2rem;
 
+}
+.contactTextArea{
+    width: 90%;
+    height: 14rem;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+
+}
+.contactUsform{
+    background-color: white;
+    width: 70%;
+    border-radius: 1px;
+}
+.mainContactContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 @media (max-width: 768px){
 .functionServiceContainer{
     display: flex;
@@ -231,6 +325,42 @@ li{
     margin: 10rem auto;
     
 }
+.socailsContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contactDetails{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     margin-top: 2.5rem;
+     margin-left: 0px;
+}
+.contactDetails h2{
+    color: #F77E21;
+}
+.contactDetails P{
+    margin-top: 2px;
+}
+.contactUsContentContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contactFormContainer{
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.otherServiceContainer{
+    height: 170vh;
+}
+
 .informationFunctionContainer{
     align-items: center;
     width: 100%;
@@ -305,6 +435,12 @@ li{
 .MiscellaneousContainer{
     height: 200vh;
 }
+.choiceContainerInfo{
+    margin: 0;
+}
+.contactUsform{
+    width: 90%;
+}
 
 }
 
@@ -314,6 +450,12 @@ li{
     }
     .MiscellaneousContainer{
         height: 220vh;
+    }
+    .contactUsform{
+        width: 90%;
+    }
+    .carousel-wrapper{
+        margin-top: -6rem;
     }
 
 }
