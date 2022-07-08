@@ -5,24 +5,24 @@ const Library = ()=>{
     const[user, setUser] = useState('');
     
     const logoutUser = async ()=>{
-        await httpClient.post("//localhost:5000/logout");
+        await httpClient.post("https://carmateserver.herokuapp.com/logout");
         window.location.href = "/";
     };
 
     useEffect(()=>{
         (async ()=>{
             try{
-                const resp = await httpClient.get("//localhost:5000/@me")
+                const resp = await httpClient.get("https://carmateserver.herokuapp.com/@me")
                 setUser(resp.data)
             } catch(error){
-                console.log("Not Authorized");
+                console.log(error);
             }
         })();
     }, []);
 
     return (
         <div>
-          <h1>Welcome to this React Application</h1>
+          <h1>CarMATE</h1>
           {user != null ? (
             <div>
               <h2>Logged in</h2>
