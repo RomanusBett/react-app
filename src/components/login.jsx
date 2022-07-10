@@ -31,7 +31,7 @@ const LoginPage = ()=>{
                     type="text"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    id="" /> 
+                    id="email" /> 
                     </div>
                     <div>
                     <label>password:</label>
