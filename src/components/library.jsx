@@ -1,29 +1,29 @@
-import React from "react";
-// import httpClient from "./httpClient";
+import React, {useState, useEffect} from "react";
+import httpClient from "./httpClient";
 
 const Library = ()=>{
-    // const[user, setUser] = useState('');
+    const[user, setUser] = useState('');
     
-    // const logoutUser = async ()=>{
-    //     await httpClient.post("https://carmateserver.herokuapp.com/logout");
-    //     window.location.href = "/";
-    // };
+    const logoutUser = async ()=>{
+        await httpClient.post("https://carmateserver.herokuapp.com/logout");
+        window.location.href = "/";
+    };
 
-    // useEffect(()=>{
-    //     (async ()=>{
-    //         try{
-    //             const resp = await httpClient.get("https://carmateserver.herokuapp.com/@me")
-    //             setUser(resp.data)
-    //         } catch(error){
-    //             console.log(error);
-    //         }
-    //     })();
-    // }, []);
+    useEffect(()=>{
+        (async ()=>{
+            try{
+                const resp = await httpClient.get("https://carmateserver.herokuapp.com/@me")
+                setUser(resp.data)
+            } catch(error){
+                console.log(error);
+            }
+        })();
+    }, []);
 
     return (
         <div>
           <h1>CarMATE</h1>
-          {/* {user != null ? (
+          {user != null ? (
             <div>
               <h2>Logged in</h2>
               <h3>ID: {user.id}</h3>
@@ -43,7 +43,7 @@ const Library = ()=>{
                 </a>
               </div>
             </div>
-          )} */}
+          )}
         </div>
       );
     };
