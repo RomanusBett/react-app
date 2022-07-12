@@ -8,7 +8,8 @@ const RegisterPage = ()=>{
 
     const registerUser = async () =>{
         try{
-             await httpClient.post("https://carmateserver.herokuapp.com/register", {
+            //  await httpClient.post("https://carmateserver.herokuapp.com/register", {
+            await httpClient.post("https://carmateserver.herokuapp.com/register", {
                 "email": email,
                 "password":password,
             })
