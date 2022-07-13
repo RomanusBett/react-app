@@ -1,9 +1,13 @@
 .main_container{
-    background-image: url("./audi.jpeg");
+    background-image: url("https://www.europeansprings.com/wp-content/uploads/2014/07/Car-Suspension.jpg");
     background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 }
 .mainContainerFilter{
-    background-color: rgba(4, 1, 14, 0.5);
+    background-color: rgba(4, 1, 14, 0.7);
     width: 100%;
     height: 100%;
 
