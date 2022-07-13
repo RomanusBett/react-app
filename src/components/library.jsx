@@ -98,8 +98,7 @@ const Library = ()=>{
               spacing={2}
               justifyContent="center"
             >
-              <Button variant="contained">Main call to action</Button>
-              <Button variant="outlined">Secondary action</Button>
+              <Button variant="contained">LogoutUser// temporary</Button>
             </Stack>
           </Container>
         </Box>
@@ -122,11 +121,14 @@ const Library = ()=>{
                   />
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Heading
+                      Front coil spring
                     </Typography>
                     <Typography>
-                      This is a media card. You can use this section to describe the
-                      content.
+                      Coil Springs for NIssan MarcH. part Number VV09-OI99 <br/>
+                      Ksh56,000
+                      {/* car type data */}
+
+
                     </Typography>
                   </CardContent>
                   <CardActions>
