@@ -8,8 +8,7 @@ const RegisterPage = ()=>{
 
     const registerUser = async () =>{
         try{
-            //  await httpClient.post("https://carmateserver.herokuapp.com/register", {
-            await httpClient.post("https://carmateserver.herokuapp.com/register", {
+             await httpClient.post("https://carmateserver.herokuapp.com/register", {
                 "email": email,
                 "password":password,
             })
@@ -23,10 +22,11 @@ const RegisterPage = ()=>{
 }
 
 return (
-  <div>
+  <div className="loginform1">
+  <div className="loginform2">
   <h1>Create an account</h1>
-  <form>
-    <div>
+  <form className="login3form">
+    <div className="formInput1">
       <label>Email: </label>
       <input
         type="text"
@@ -35,7 +35,7 @@ return (
         id=""
       />
     </div>
-    <div>
+    <div className="formInput1">
       <label>Password: </label>
       <input
         type="password"
@@ -48,6 +48,8 @@ return (
       Submit
     </button>
   </form>
+  </div>
+  
 </div>
   );
 };

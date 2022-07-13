@@ -10,7 +10,7 @@ import OtherService from './otherService';
 import Contact from './contact';
 import ContactUs from './contactUs';
 import Socials from './socials';
-// import Mycarousel from './carousel'
+import Mycarousel from './carousel'
 
 const theme= createTheme({
     palette: {
@@ -140,7 +140,7 @@ const HomeBody = ()=>{
         <div className='mainCarouselContainerInfo'>
                
         <div className='carouselInformationContainer'>
-        {/* <Mycarousel /> */}
+        <Mycarousel />
         </div>
 
 
