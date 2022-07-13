@@ -315,7 +315,55 @@ textarea{
     align-items: center;
     justify-content: center;
 }
+.loginform1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-family: sans-serif;
+}
+
+.loginform2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.login3form{
+    border: 2px solid black;
+    height: 50vh;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 5px 10px 10px 5px #A7A7A7;
+}
+.formInput1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.formInput1 input{
+    margin-top: 10px;
+    width: 50%;
+    height: 1.5rem;
+}
+
+
+
+
+
+
+
 @media (max-width: 768px){
+.formInput1 input{
+    width: 70%;
+}
+
+.login3form{
+    width: 90%;
+}
 .functionServiceContainer{
     display: flex;
     flex-direction: column;
@@ -459,3 +507,14 @@ textarea{
     }
 
 }
+
+@media (max-width: 1300px){
+    .formInput1 input{
+        width: 70%;
+    }
+    
+    .login3form{
+        width: 70%;
+    }
+}
+
