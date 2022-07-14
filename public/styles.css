@@ -16,7 +16,7 @@
     padding-top: 10rem;
 }
 .MiscellaneousContainer{
-    background-color: #03002E ;
+    background-color: #03002E;
     height: 100vh;
     width: 100%;
     transform: skewY(9deg);
@@ -31,9 +31,7 @@
 }
 
 
-.MiscellaneousContainer p{
-  margin: 0px;
-}
+
 .carouselContainerInfo{
     transform: skewY(-9deg);
     width: 100%;
@@ -85,7 +83,13 @@
 }
 .functionalContainer{
     padding: 1.2rem;
+    background-image: linear-gradient(to bottom right, #191970, #0652C5);
+    margin: 10px;
+    width: 33.333%;
+    border-radius: 10px;
+
 }
+
 .muiIconsContainer{
     display: flex;
     justify-content: space-around;
@@ -103,7 +107,7 @@
     margin: 10rem auto;
 }
 .functionServiceContainer h1{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     color: 000000;
 }
 .functionServiceContainer p{
@@ -120,6 +124,9 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
+}
+.dynamic{
+   color: #F77E21;
 }
 .informationSecondContainer{
     align-items: left;
@@ -187,7 +194,9 @@
 .MiscellaneousContainer p{
     font-family: 'poppins', sans-serif;
     font-size: 1.1rem;
-    opacity: 0.7;
+    opacity: 0.8;
+    margin: 0px;
+
 }
 .mainServiceOfferedContainer{
     display: flex;
@@ -356,7 +365,15 @@ textarea{
 
 
 
-
+@media (max-width: 1300px){
+    .formInput1 input{
+        width: 70%;
+    }
+    
+    .login3form{
+        width: 70%;
+    }
+}
 
 
 
@@ -442,9 +459,6 @@ textarea{
     justify-content: center;
     flex-direction: column;
 }
-.informationSecondContainer h1{
-    margin-left: -15%;
-}
 .firstserviceImage{
     width: 70%;
     height: 70%;
@@ -463,6 +477,13 @@ textarea{
 
 
 }
+.functionalContainer{
+    width: 95%;
+    margin: 10px 0;
+    padding: 50px 0;
+    height: 33.33%;
+
+}
 .functionalContainer p{
     text-align: center
 }
@@ -475,6 +496,8 @@ textarea{
 .choiceChildren{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .choiceHeading{
     width: 15rem;
@@ -496,12 +519,34 @@ textarea{
 
 }
 
+
+@media (max-width: 512px){
+    .MiscellaneousContainer{
+     height: 160vh;
+    }
+ }
+ @media (max-width: 390px){
+    .MiscellaneousContainer{
+     height: 175vh;
+    }
+ }
+ @media (max-width: 375px){
+    .MiscellaneousContainer{
+        height: 220vh;
+    }
+ }
+ @media (max-width: 360px){
+    .MiscellaneousContainer{
+        height: 200vh;
+    }
+ }
+
 @media (max-width: 300px){
     .bodyContainer{
         padding-top: 7rem;
     }
     .MiscellaneousContainer{
-        height: 220vh;
+        height: 250vh;
     }
     .contactUsform{
         width: 90%;
@@ -509,16 +554,13 @@ textarea{
     .carousel-wrapper{
         margin-top: -6rem;
     }
+    .informationContainer{
+        height: 200vh;
+    }
+   
 
 }
 
-@media (max-width: 1300px){
-    .formInput1 input{
-        width: 70%;
-    }
-    
-    .login3form{
-        width: 70%;
-    }
-}
+
+
 
