@@ -159,7 +159,7 @@
     justify-content: center;
 }
 .carouselInformationContainer{
-    background-color: white;
+    background-color: aliceblue;
     width: 90%;
     height: 25rem;
     display: flex;
@@ -198,6 +198,14 @@
     margin: 0px;
 
 }
+.carousel-Information ul{
+    list-style: none;
+}
+.carousel-Information li{
+    color: #03002E;
+    font-weight: bold;
+    font-size: large;
+}
 .mainServiceOfferedContainer{
     display: flex;
     align-items: center;
@@ -216,10 +224,10 @@
     width: 100%;
     color: #03002E;
 }
-.carousel-Information h1{
-    color: #03002E;
+.carousel-Information{
+    text-align: center;
 }
-.carousel-Information p{
+.carousel-Information h1{
     color: #03002E;
 }
 .carousel .control-dots{
@@ -342,9 +350,11 @@ textarea{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 }
 .login3form{
-    border: 2px solid black;
+    border: 2px solid grey;
     height: 50vh;
     width: 30%;
     border-radius: 10px;
@@ -359,11 +369,52 @@ textarea{
 }
 .formInput1 input{
     margin-top: 10px;
-    width: 50%;
-    height: 1.5rem;
+    width: 70%;
+    height: 2rem;
 }
 
-
+.quickfix1{
+    border-radius: 10px;
+    border: 1px solid #03002E;
+    height: 25rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url('https://www.confused.com/-/media/confused/articles/buying/best-worst/man-looking-at-engine-final-tiny.jpg?la=en-gb&hash=9F2F1005193D98F43909098414436A66FF5CA4EC');
+    margin-right: 20px;
+}
+.service2{
+    width: 100%;
+    margin-top: -23%;
+}
+.filter2{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    opacity: 0.75;
+    border-radius: 10px;
+}
+.filter3 li{
+    opacity: 1;
+    color: white;
+}
+.filter3 ul{
+    list-style: none;
+}
+.filter3 h1{
+    color: #F77E21;
+    opacity: 1;
+}
+.service2{
+    color: #03002E;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.loginform2 button{
+    margin-top: 10px;
+}
 
 @media (max-width: 1300px){
     .formInput1 input{
@@ -374,6 +425,31 @@ textarea{
         width: 70%;
     }
 }
+@media (max-width: 1300px){
+    .carouselContainer{
+        display: flex;
+        flex-direction: column;
+        height: 200vh;
+    }
+    .carousel1{
+        width: 100%;
+    }
+    .quickfix1{
+        width: 90%;
+        margin-left: 5%;
+
+    }
+
+    .service2{
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        
+    }
+}
+  
 
 
 
@@ -524,7 +600,30 @@ textarea{
     .MiscellaneousContainer{
      height: 160vh;
     }
+    .carouselInformationContainer{
+        width: 100%;
+    }
+    .quickfix1{
+        width: 100%;
+        margin-left: 0;
+    }
+    .carousel-Information li{
+        margin-left: -15%;
+
+    }
+
  }
+ @media (max-width: 512px){
+    .carouselContainer{
+        height: 150vh;
+    }
+ }
+ @media (max-width: 414px){
+    .otherServiceContainer{
+        height: 120vh;
+    }
+ }
+
  @media (max-width: 390px){
     .MiscellaneousContainer{
      height: 175vh;
@@ -534,10 +633,28 @@ textarea{
     .MiscellaneousContainer{
         height: 220vh;
     }
+    .carouselContainer{
+        height: 200vh;
+    }
+    .otherServiceContainer{
+        height: 170vh;
+    }
+    .informationContainer{
+        height: 170vh;
+    }
  }
  @media (max-width: 360px){
     .MiscellaneousContainer{
         height: 200vh;
+    }
+    .otherServiceContainer{
+        height: 150vh;
+    }
+    .carouselContainer{
+        height: 170vh;
+    }
+    .informationContainer{
+        height: 160vh;
     }
  }
 

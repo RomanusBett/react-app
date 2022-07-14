@@ -24,7 +24,7 @@ const RegisterPage = ()=>{
 return (
   <div className="loginform1">
   <div className="loginform2">
-  <h1>Create an account</h1>
+  <h1>CREATE AN ACCOUNT</h1>
   <form className="login3form">
     <div className="formInput1">
       <label>Email: </label>
