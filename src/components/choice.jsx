@@ -14,7 +14,7 @@ const Choice = ()=>{
          <div className="choiceChildren">
           <div className="functionalContainer">
             <div className="muiIconsContainer">
-            <DirectionsCarFilledIcon sx={{fontSize:'6rem', opacity:'0.9'}}/>
+            <DirectionsCarFilledIcon sx={{fontSize:'6rem', opacity:'0.9',}}/>
             </div>
             <div className="muiIconsContainer">
             <h3>EASY MECHANIC ACCESS</h3>

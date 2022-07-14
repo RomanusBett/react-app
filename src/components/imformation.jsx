@@ -10,8 +10,9 @@ const Information = ()=>{
         <div>
 
         <div className="informationFunctionContainer">
+        <div></div>
         <h1>
-             VEHICLE REPAIR
+             We're offer <span className="dynamic">Premium</span> car repair services and checks
         </h1>
 
         <p>
@@ -30,7 +31,7 @@ const Information = ()=>{
 
         <div className="informationSecondContainer">
         <h1>
-        ABOUT US
+        We're a <span className="dynamic">Dynamic</span> Team that offers Quality checks
         </h1>
 
         <p>
