@@ -12,7 +12,7 @@ const Information = ()=>{
         <div className="informationFunctionContainer">
         <div></div>
         <h1>
-             We're offer <span className="dynamic">Premium</span> car repair services and checks
+             We offer <span className="dynamic">Premium</span> car repair services and checks
         </h1>
 
         <p>

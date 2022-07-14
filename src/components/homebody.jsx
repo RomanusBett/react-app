@@ -1,5 +1,5 @@
 import React from 'react';
-import {Stack,AppBar, Toolbar,  createTheme, Box, Typography, Button, ThemeProvider} from '@mui/material';
+import { Stack, AppBar, Toolbar, createTheme, Box, Typography, Button, ThemeProvider } from '@mui/material';
 import { Link } from 'react-router-dom';
 import CarRepairIcon from '@mui/icons-material/CarRepair';
 import Navigation from './Navigation';
@@ -12,9 +12,9 @@ import ContactUs from './contactUs';
 import Socials from './socials';
 import Mycarousel from './carousel'
 
-const theme= createTheme({
+const theme = createTheme({
     palette: {
-        background:{
+        background: {
             paper: '#F9F9F9',
             light: '#ffac33',
             main: '#007bb2',
@@ -28,143 +28,186 @@ const theme= createTheme({
             main: '#f44336',
             dark: '#ba000d',
             contrastText: '#fff',
-        }        
+        }
     },
-    typography:{
-        fontFamily:'"Roboto", "Helvetica", "Arial", sans-serif'
+    typography: {
+        fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif'
     },
 });
 
-const HomeBody = ()=>{
-    return(
-        <ThemeProvider theme = {theme}>
-        <div className='main_container'>
-        <div className='mainContainerFilter'>
+const HomeBody = () => {
+    return (
+        <ThemeProvider theme={theme}>
+            <div className='main_container'>
+                <div className='mainContainerFilter'>
 
-        <Box 
-        sx={{
-            fontFamily:'theme.typography.fontFamily.Arial',
-            pt:0,
-            minWidth: '100%',
-            height: '100vh',
+                    <Box
+                        sx={{
+                            fontFamily: 'theme.typography.fontFamily.Arial',
+                            pt: 0,
+                            minWidth: '100%',
+                            height: '100vh',
 
-        }}>
-      <AppBar position='absolute'>
-        <Toolbar sx={{
-            bgcolor:'background.dark',
-            position: 'fixed',
-            width: '100%',
-            height: 36,
-            borderBottom: '1px solid black',
-        }}>
-        <div className='big-container'>
-        <div className='logoContainer'>
-        <Typography variant='h6' sx={{
-            display:'flex',
-            color:'background.light'
+                        }}>
+                        <AppBar position='absolute'>
+                            <Toolbar sx={{
+                                bgcolor: 'background.dark',
+                                position: 'fixed',
+                                width: '100%',
+                                height: 36,
+                                borderBottom: '1px solid black',
+                            }}>
+                                <div className='big-container'>
+                                    <div className='logoContainer'>
+                                        <Typography variant='h6' sx={{
+                                            display: 'flex',
+                                            color: 'background.light'
 
-        }}>
-        <CarRepairIcon fontSize='medium' sx={{
-            mt:0.5,
-            mr:0.5,
-            color:'background.light'
-             }}/>
-        CarMATE
-        </Typography>
-        </div>
-        <div>
-
-
-       <Navigation />
-      
-        </div>
-        </div>
-        </Toolbar>
+                                        }}>
+                                            <CarRepairIcon fontSize='medium' sx={{
+                                                mt: 0.5,
+                                                mr: 0.5,
+                                                color: 'background.light'
+                                            }} />
+                                            CarMATE
+                                        </Typography>
+                                    </div>
+                                    <div>
 
 
-        </AppBar>
+                                        <Navigation />
 
-        <div className='bodyContainer'>
-        <Typography component='h1' variant='h4' align='center' sx={{fontWeight:'bold', color:'text.light'}} gutterBottom>
-        GET YOUR CAR RUNNING!
-        </Typography>
-        <Typography variant='h5' align='center' sx={{color:'text.contrastText'}}  paragraph>
-            Stuck? Need remote repairs? Parts replacement? Diagnostics? <br />Our mechanics are up to task always and everywhere at your request. 
-        </Typography>
-        <Stack sx={{pt:12}}
-        direction='row'
-        spacing={2}
-        justifyContent='center'>
-        <Link to='/login' style={{textDecoration:'none'}}>
-        <Button size='large' variant='contained' sx={{color:'text.primary', bgcolor:'background.light'}}>SignIn</Button>
-        </Link>
-        <Link to='/register' style={{textDecoration:'none'}}>
-        <Button size='large' variant='outlined' sx={{color:'text.light'}}>SignUp</Button>
-        </Link>
+                                    </div>
+                                </div>
+                            </Toolbar>
 
-        </Stack>
 
-        </div>
-        </Box>
-        </div>
-        </div>
+                        </AppBar>
 
-        
-        <div>  
-        <Information /> 
-        </div>
-        
+                        <div className='bodyContainer'>
+                            <Typography component='h1' variant='h4' align='center' sx={{ fontWeight: 'bold', color: 'text.light' }} gutterBottom>
+                                GET YOUR CAR RUNNING!
+                            </Typography>
+                            <Typography variant='h5' align='center' sx={{ color: 'text.contrastText' }} paragraph>
+                                Stuck? Need remote repairs? Parts replacement? Diagnostics? <br />Our mechanics are up to task always and everywhere at your request.
+                            </Typography>
+                            <Stack sx={{ pt: 12 }}
+                                direction='row'
+                                spacing={2}
+                                justifyContent='center'>
+                                <Link to='/login' style={{ textDecoration: 'none' }}>
+                                    <Button size='large' variant='contained' sx={{ color: 'text.primary', bgcolor: 'background.light' }}>SignIn</Button>
+                                </Link>
+                                <Link to='/register' style={{ textDecoration: 'none' }}>
+                                    <Button size='large' variant='outlined' sx={{ color: 'text.light' }}>SignUp</Button>
+                                </Link>
 
-        <div className='MiscellaneousContainer'>
-        <div className='rotatedContentContainer'>
-        <Choice />
+                            </Stack>
 
-        </div>
-        </div> 
-        <div className='carouselContainer'>
-        <div className='carouselContainerInfo'>
+                        </div>
+                    </Box>
+                </div>
+            </div>
 
-        <div className='mainServiceOfferedContainer'>
-        <div className='servicesOfferedContainer'>
-            <h4>SERVICES WE OFFER</h4>
-        </div>
-        </div>
 
-        <div className='mainBuildIconContainer'>
-        <div className='buildIconContainer'>
-        <BuildIcon sx={{color:'background.dark', fontSize:'60px'}}/>
-        </div>
-        </div>
-    
-           
-        <div className='mainCarouselContainerInfo'>
+            <div>
+                <Information />
+            </div>
+
+
+            <div className='MiscellaneousContainer'>
+                <div className='rotatedContentContainer'>
+                    <Choice />
+
+                </div>
+            </div>
+            <div className='carouselContainer'>
+                <div className='carousel1'>
+                    <div className='carouselContainerInfo'>
+
+                        <div className='mainServiceOfferedContainer'>
+                            <div className='servicesOfferedContainer'>
+                                <h4>SERVICES WE OFFER</h4>
+                            </div>
+                        </div>
+
+                        <div className='mainBuildIconContainer'>
+                            <div className='buildIconContainer'>
+                                <BuildIcon sx={{ color: 'background.dark', fontSize: '60px' }} />
+                            </div>
+                        </div>
+
+
+                        <div className='mainCarouselContainerInfo'>
+
+                            <div className='carouselInformationContainer'>
+                                <Mycarousel />
+                            </div>
+
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+
+                <div className='carousel2'>
+            
                
-        <div className='carouselInformationContainer'>
-        <Mycarousel />
-        </div>
+                </div>
+
+                <div className='carouselContainerInfo'>
+                <div className='service2'>
+                  <h2>OTHER SERVICES</h2>
+                </div>
+
+                <div className='quickfix1'>
+                <div className='filter2'>
+                <div className='filter3'>
+
+                  <h1>QUICK FIXES</h1>
+                  <ul>
+                    <li>water pump replacement</li>
+                    <li>Thermostat Replacement</li>
+                    <li>Transmition fluid replacement</li>
+                    <li>Rear wheel drum and brake line replacement</li>
+                    <li>Differential Repair and replacement</li>
+                    <li>Front wheel tie rod and Rockend</li>
+                    <li>Engine diagnostics</li>
+                    <li>ball joint replacement</li>
 
 
-        </div>
+                    
+                  </ul>
+                </div>
 
-     
-     
-        </div>
+                </div>
+                </div>
 
-      
-        </div>
-        <div className='otherServiceContainer'>
-        <div className='contactContainer'>
-        <ContactUs />
-        </div> 
-        <OtherService />
-        <Contact />
-        </div>
-        <Socials />
+
+                </div>
+
+
+
+
+
+
+            </div>
+            <div className='otherServiceContainer'>
+                <div className='contactContainer'>
+                    <ContactUs />
+                </div>
+                <OtherService />
+                <Contact />
+            </div>
+            <Socials />
 
         </ThemeProvider>
- 
+
     )
 }
 
 export default HomeBody;
-export {theme};
+export { theme };

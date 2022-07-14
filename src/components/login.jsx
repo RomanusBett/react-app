@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import httpClient from "./httpClient";
-
+import LockRoundedIcon from '@mui/icons-material/LockRounded';
 
 
 
@@ -28,8 +28,9 @@ const LoginPage = ()=>{
     return(
         <div className="loginform1">
         <div className="loginform2">
-        <h1>Login to your account</h1>
+        <h1>SIGN IN TO YOUR ACCOUNT</h1>
             <form className="login3form">
+                <LockRoundedIcon fontSize="large"  sx={{color:'#F77E21'}} /> 
                 <div className="formInput1">
                     <label>Email:</label>
                     <input
