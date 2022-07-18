@@ -1,15 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Information = ()=>{
+
+  useEffect(()=>{
+    Aos.init({duration: 2000});
+     }, []);
+
     return(
         <div className="informationContainer">
         <div className="functionServiceContainer">
-        <div className="secondImageContainer">
+        <div data-aos="fade-right" className="secondImageContainer">
             <img className="firstserviceImage" src="https://n7autorepairs.ie/wp-content/uploads/2020/02/376-3768572_mechanical-clipart-car-repair-shop-car-mechanic-clipart.png" alt=""/>
         </div>
         <div>
 
-        <div className="informationFunctionContainer">
+        <div data-aos="fade-up" className="informationFunctionContainer">
         <div></div>
         <h1>
              We offer <span className="dynamic">Premium</span> car repair services and checks
@@ -29,7 +36,7 @@ const Information = ()=>{
 
         <div>
 
-        <div className="informationSecondContainer">
+        <div data-aos="flip-left" className="informationSecondContainer">
         <h1>
         We're a <span className="dynamic">Dynamic</span> Team that offers Quality checks
         </h1>
@@ -39,7 +46,7 @@ const Information = ()=>{
         vehicle and easy vehicle parts sourcing to towing your car.          </p>
         </div>
         </div>
-        <div className="secondImageContainer">
+        <div data-aos="flip-right" className="secondImageContainer">
             <img className="secondServiceImage" src="https://cdnwebsite.databox.com/wp-content/uploads/2020/12/01062702/about-us-page-examples.png" alt=""/>
         </div>
         </div>
