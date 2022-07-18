@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import BeenhereIcon from '@mui/icons-material/Beenhere';
 import DirectionsCarFilledIcon from '@mui/icons-material/DirectionsCarFilled';
 import ConstructionIcon from '@mui/icons-material/Construction';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Choice = ()=>{
+  useEffect(()=>{
+    Aos.init({duration: 2000})
+     
+  }, []);
+
     return(
         <div className='choiceContainerInfo'>
         <div className="mainChoiceHeader">
@@ -12,7 +19,7 @@ const Choice = ()=>{
          </div>
         </div>
          <div className="choiceChildren">
-          <div className="functionalContainer">
+          <div data-aos="flip-left" className="functionalContainer">
             <div className="muiIconsContainer">
             <DirectionsCarFilledIcon sx={{fontSize:'6rem', opacity:'0.9',}}/>
             </div>
@@ -24,7 +31,7 @@ const Choice = ()=>{
             access our mechanics and their location.
             </p>
           </div>
-          <div className="functionalContainer">
+          <div data-aos="fade-up" className="functionalContainer">
             <div className="muiIconsContainer">
             <ConstructionIcon sx={{fontSize:'6rem', opacity:'0.9'}} />
             </div>
@@ -36,7 +43,7 @@ const Choice = ()=>{
                sourcing them locally.</p>
                </div>
           </div>
-          <div className="functionalContainer">
+          <div data-aos="flip-right" className="functionalContainer">
             <div>
             <div className="muiIconsContainer">
             <BeenhereIcon sx={{fontSize:'6rem', opacity:'0.9'}}/> 

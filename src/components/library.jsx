@@ -16,13 +16,20 @@ import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import SearchIcon from '@mui/icons-material/Search';
+import Input from '@mui/material/Input';
+import InputAdornment from '@mui/material/InputAdornment';
+
+
+
 
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
+      <Link color="inherit" href="http://carmateapp.herokuapp.com/">
+        CarMATE
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -64,7 +71,10 @@ const Library = ()=>{
           <CarRepairIcon sx={{ mr: 1 }} />
             CarMate
           </Typography>
+          <Box>
           <ShoppingCartOutlinedIcon />
+          <AccountCircleIcon sx={{ml:'10px'}} />
+          </Box>
         </Toolbar>
       </AppBar>
       <main>
@@ -76,21 +86,18 @@ const Library = ()=>{
             pb: 6,
           }}
         >
-          <Container maxWidth="sm">
+          <Container maxWidth="lg">
             <Typography
               component="h1"
-              variant="h2"
+              variant="h3"
               align="center"
               color="text.primary"
               gutterBottom
             >
-              Lorem Ipsum
+            BUY PARTS
             </Typography>
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-             nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-             officia deserunt mollit anim id est laborum."
+            The following parts are available for purchase.
             </Typography>
             <Stack
               sx={{ pt: 4 }}
@@ -98,7 +105,16 @@ const Library = ()=>{
               spacing={2}
               justifyContent="center"
             >
-              <Button variant="contained">LogoutUser// temporary</Button>
+
+             <Input
+          id="input-with-icon-adornment"
+          startAdornment={
+            <InputAdornment position="start">
+              <SearchIcon />
+            </InputAdornment>
+          }
+        />
+
             </Stack>
           </Container>
         </Box>
@@ -114,7 +130,7 @@ const Library = ()=>{
                     component="img"
                     sx={{
                       // 16:9
-                      pt: '56.25%',
+                      pt: '10%',
                     }}
                     image="https://burggermany.de/wp-content/uploads/2019/07/strut-complete.jpg"
                     alt="random"
@@ -132,8 +148,7 @@ const Library = ()=>{
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small">View</Button>
-                    <Button size="small">Edit</Button>
+                    <Button variant="contained" size="small">ADD TO CART</Button>
                   </CardActions>
                 </Card>
               </Grid>
@@ -144,15 +159,15 @@ const Library = ()=>{
       {/* Footer */}
       <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
         <Typography variant="h6" align="center" gutterBottom>
-          Footer
+          CarMATE
         </Typography>
         <Typography
           variant="subtitle1"
           align="center"
           color="text.secondary"
           component="p"
-        >
-          Something here to give the footer a purpose!
+        > 
+        CarMATE
         </Typography>
         <Copyright />
       </Box>
