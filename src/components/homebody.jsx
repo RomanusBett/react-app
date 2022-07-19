@@ -7,7 +7,6 @@ import Information from './imformation';
 import Choice from './choice';
 import BuildIcon from '@mui/icons-material/Build';
 import OtherService from './otherService';
-import Contact from './contact';
 import ContactUs from './contactUs';
 import Socials from './socials';
 import Mycarousel from './carousel'
@@ -110,18 +109,18 @@ const HomeBody = () => {
             </div>
 
 
-            <div>
+            <div id='aboutus'>
                 <Information />
             </div>
 
 
             <div className='MiscellaneousContainer'>
-                <div className='rotatedContentContainer'>
+                <div id='services' className='rotatedContentContainer'>
                     <Choice />
 
                 </div>
             </div>
-            <div className='carouselContainer'>
+            <div id='otherservices' className='carouselContainer'>
                 <div className='carousel1'>
                     <div className='carouselContainerInfo'>
 
@@ -195,12 +194,11 @@ const HomeBody = () => {
 
 
             </div>
-            <div className='otherServiceContainer'>
+            <div id='contactus' className='otherServiceContainer'>
                 <div className='contactContainer'>
                     <ContactUs />
                 </div>
                 <OtherService />
-                <Contact />
             </div>
             <Socials />
 

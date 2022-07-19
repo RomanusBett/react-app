@@ -1,19 +1,24 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {Button} from "@mui/material";
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import { Typography } from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const ContactUs = () => {
+    useEffect(()=>{
+        Aos.init({duration: 2000});
+         }, []);
     return(
         <div className="contactUsContainer">
         <div className="mainContactContainer">
-        <div className="contactHeadingContainer">
+        <div data-aos='flip-left' className="contactHeadingContainer">
             <h1>CONTACT US</h1>
         </div>
         </div>
         <div className="contactFormContainer">
-        <div className="contactUsContentContainer">
+        <div data-aos='fade-right' className="contactUsContentContainer">
         <div className="contactUsform">
         <form>
             <input className="contactInput" type="text" placeholder="Name"/>
@@ -29,7 +34,7 @@ const ContactUs = () => {
 
 
 
-        <div className="contactDetails">
+        <div data-aos='fade-up' className="contactDetails">
         <h2>CONTACT DETAILS</h2>
         CarMATE address:<br/>
         Nairobi, Kenya
