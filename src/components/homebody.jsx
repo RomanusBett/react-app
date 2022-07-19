@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Stack, AppBar, Toolbar, createTheme, Box, Typography, Button, ThemeProvider } from '@mui/material';
 import { Link } from 'react-router-dom';
 import CarRepairIcon from '@mui/icons-material/CarRepair';
@@ -10,8 +10,6 @@ import OtherService from './otherService';
 import ContactUs from './contactUs';
 import Socials from './socials';
 import Mycarousel from './carousel'
-import Aos from 'aos';
-import "aos/dist/aos.css";
 
 const theme = createTheme({
     palette: {
@@ -37,13 +35,8 @@ const theme = createTheme({
 });
 
 const HomeBody = () => {
-    useEffect(() => {
-        Aos.init({ duration: 2000 });
-    },[])
-
     return (
         <ThemeProvider theme={theme}>
-
             <div className='main_container'>
                 <div className='mainContainerFilter'>
 
@@ -121,13 +114,13 @@ const HomeBody = () => {
             </div>
 
 
-            <div id='services' className='MiscellaneousContainer'>
-                <div className='rotatedContentContainer'>
+            <div className='MiscellaneousContainer'>
+                <div id='services' className='rotatedContentContainer'>
                     <Choice />
 
                 </div>
             </div>
-            <div id='otherservices' className='carouselContainer'>
+            <div className='carouselContainer'>
                 <div className='carousel1'>
                     <div className='carouselContainerInfo'>
 
@@ -138,7 +131,7 @@ const HomeBody = () => {
                         </div>
 
                         <div className='mainBuildIconContainer'>
-                            <div data-aos='flip-right' className='buildIconContainer'>
+                            <div className='buildIconContainer'>
                                 <BuildIcon sx={{ color: 'background.dark', fontSize: '60px' }} />
                             </div>
                         </div>
@@ -146,7 +139,7 @@ const HomeBody = () => {
 
                         <div className='mainCarouselContainerInfo'>
 
-                            <div data-aos='fade-up' className='carouselInformationContainer'>
+                            <div className='carouselInformationContainer'>
                                 <Mycarousel />
                             </div>
 
@@ -165,11 +158,11 @@ const HomeBody = () => {
                 </div>
 
                 <div className='carouselContainerInfo'>
-                <div data-aos='flip-left' className='service2'>
+                <div className='service2'>
                   <h2>OTHER SERVICES</h2>
                 </div>
 
-                <div data-aos='fade-left' className='quickfix1'>
+                <div className='quickfix1'>
                 <div className='filter2'>
                 <div className='filter3'>
 
@@ -201,7 +194,7 @@ const HomeBody = () => {
 
 
             </div>
-            <div id='contactus' className='otherServiceContainer'>
+            <div className='otherServiceContainer'>
                 <div className='contactContainer'>
                     <ContactUs />
                 </div>
