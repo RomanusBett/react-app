@@ -36,7 +36,7 @@ const Information = ()=>{
 
         <div>
 
-        <div data-aos="flip-left" className="informationSecondContainer">
+        <div data-aos="fade-right" className="informationSecondContainer">
         <h1>
         We're a <span className="dynamic">Dynamic</span> Team that offers Quality checks
         </h1>

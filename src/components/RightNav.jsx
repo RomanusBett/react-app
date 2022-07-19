@@ -30,12 +30,21 @@ const Ul = styled.ul`
 const RightNav = ({ open }) => {
   return (
     <Ul open={open}>
-      <li>TOWING</li>
-      <li>VEHICLE REPAIR</li>
-      <li>ORDER PARTS</li>
-      <li>OTHER SERVICES</li>
+      <li>
+      <a className='navigation1ref' href='#aboutus'><h4>ABOUT US</h4></a></li>
+      
+      <li>
+      <a className='navigation1ref' href='#services'><h4>SERVICES</h4></a>
+      </li>
+
+      <li>
+      <a className='navigation1ref' href='#otherservices'><h4>OTHER SERVICES</h4></a>
+      </li>
+      <li>
+      <a className='navigation1ref' href='#contactus'><h4>CONTACT US</h4></a>
+      </li>
     </Ul>
   )
 }
 
-export default RightNav
+export default RightNav;
