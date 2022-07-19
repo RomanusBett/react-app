@@ -120,7 +120,7 @@ const HomeBody = () => {
 
                 </div>
             </div>
-            <div className='carouselContainer'>
+            <div id='otherservices' className='carouselContainer'>
                 <div className='carousel1'>
                     <div className='carouselContainerInfo'>
 
@@ -194,7 +194,7 @@ const HomeBody = () => {
 
 
             </div>
-            <div className='otherServiceContainer'>
+            <div id='contactus' className='otherServiceContainer'>
                 <div className='contactContainer'>
                     <ContactUs />
                 </div>
