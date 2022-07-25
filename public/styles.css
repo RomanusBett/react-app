@@ -346,10 +346,11 @@ textarea{
 }
 .loginform1{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
     font-family: sans-serif;
+    height: 100vh;
 }
 
 .loginform2{
@@ -364,9 +365,15 @@ textarea{
 .login3form{
     border: 2px solid grey;
     height: 50vh;
-    width: 30%;
+    width: 40%;
     border-radius: 10px;
     box-shadow: 5px 10px 10px 5px #A7A7A7;
+    margin-top: 10%;
+    background-color: #FAF9F6;
+}
+.login3form h1{
+    color: #0039a6;
+    font-family: sans-serif;
 }
 .formInput1{
     display: flex;
@@ -421,7 +428,28 @@ textarea{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .loginform2 button{
-    margin-top: 10px;
+    margin-top: 3rem;
+}
+.submitbutton{
+    background-color: #fff;
+    height: 2.5rem;
+    width: 40%;
+    border: 2px solid #0039a6;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 5%;
+    font-size: 1.4rem;
+    font-family: sans-serif;
+    color: #0039a6;
+    
+}
+.submitbutton:hover{
+    background-color: #0039a6;
+    color: white;
+    transform: scale(1.1);
+}
+.submitbutton:active{
+    transform: scale(0.9);
 }
 
 @media (max-width: 1300px){

@@ -1,37 +1,56 @@
 import React, {useState} from "react";
-import httpClient from "./httpClient";
-
 
 const RegisterPage = ()=>{
-    const[email, setEmail] = useState("");
-    const[password, setPassword] = useState("");
+  
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
 
-    const registerUser = async () =>{
-        try{
-             await httpClient.post("https://carmateserver.herokuapp.com/register", {
-                "email": email,
-                "password":password,
-            })
-            window.location.href = "/library";
-        } catch( error ){
-            if(error.response.status === 401){
-                alert("Invalid credentials");
-             
+  function isValidEmail() {
+    return /\S+@\S+\.\S+/.test(email);
+  }
+
+
+  const handleChange = () => {
+    if (!isValidEmail(email)) {
+      alert('Email is invalid');
+    } else {
+      fetch('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCTv42i6dYMpWZGYiogDxi5TBUEjVahLhY',
+      {
+        method: 'POST',
+        body: JSON.stringify({
+          email: email,
+          password: password,
+          returnSecureToken: true
+        }),
+        headers: {
+          'Content-Type': 'application/json'
         }
+
+      }).then(response => {
+        if(response.ok){
+          window.location.href = '/library';
+        }
+        else{
+          return response.json().then(data =>{
+            console.log(data);
+          })
+        }
+      })
     }
-}
+  };
+  
 
 return (
   <div className="loginform1">
   <div className="loginform2">
-  <h1>CREATE AN ACCOUNT</h1>
   <form className="login3form">
+    <h1>CREATE AN ACCOUNT</h1>
+
     <div className="formInput1">
       <label>Email: </label>
       <input
         type="text"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
+        onChange={e => setEmail(e.target.value)}
         id=""
       />
     </div>
@@ -39,14 +58,14 @@ return (
       <label>Password: </label>
       <input
         type="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
+        onChange={(e)=>setPassword(e.target.value)}
         id=""
       />
     </div>
-    <button type="button" onClick={() => registerUser()}>
-      Submit
+    <button className="submitbutton" type="button" onClick={e=>handleChange()}>
+      SUBMIT
     </button>
+    <a href="/login">Already have an account?</a>
   </form>
   </div>
   
