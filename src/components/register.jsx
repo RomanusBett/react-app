@@ -1,9 +1,11 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
+import AuthContext from "../store/auth-context";
 
 const RegisterPage = ()=>{
   
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const authCtx = useContext(AuthContext);
 
   function isValidEmail() {
     return /\S+@\S+\.\S+/.test(email);
@@ -28,16 +30,24 @@ const RegisterPage = ()=>{
 
       }).then(response => {
         if(response.ok){
-          window.location.href = '/library';
+            return response.json();
         }
         else{
-          return response.json().then(data =>{
-            console.log(data);
-          })
+            return response.json().then(data =>{
+                let errorMessage = 'Authentication failed';
+                throw new Error(errorMessage);
+            })
         }
-      })
-    }
+    }).then((data) => {
+      const expirationTime = new Date(new Date().getTime()+ (+data.expiresIn*1000));
+      authCtx.login(data.idToken, expirationTime.toISOString());
+      window.location.href = '/library';
+
+    }).catch((err)=>{
+        alert(err.message);
+    });
   };
+  }
   
 
 return (
