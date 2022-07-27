@@ -7,10 +7,12 @@ import AuthContext from "../store/auth-context";
 const LoginPage = ()=>{
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
+    const [buttonText, setButtonText] = useState('SUBMIT');
 
     const authCtx = useContext(AuthContext);
 
     function loginUser(){
+        setButtonText('loading...');
         fetch('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCTv42i6dYMpWZGYiogDxi5TBUEjVahLhY',
         {
             method: 'POST',
@@ -41,6 +43,7 @@ const LoginPage = ()=>{
         }).catch((err)=>{
             alert(err.message);
         });
+        
     }
 
 
@@ -65,7 +68,7 @@ const LoginPage = ()=>{
                     onChange={e => setPassword(e.target.value)}
                     id="" />  
                 </div>
-                    <button className="submitbutton" type="button" onClick={e=>loginUser()}>Submit</button>
+                    <button className="submitbutton" type="button" onClick={e=>loginUser()}>{buttonText}</button>
                     <a href="/register">Don't have an account? Sign up</a>
             </form>
         </div>
