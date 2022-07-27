@@ -22,6 +22,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import SearchIcon from '@mui/icons-material/Search';
 import Input from '@mui/material/Input';
 import InputAdornment from '@mui/material/InputAdornment';
+import QuickFix from './quickfix';
 
 
 
@@ -43,7 +44,7 @@ function Copyright() {
   );
 }
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const cards = [1, 2, 3];
 
 const theme = createTheme();
 
@@ -88,6 +89,11 @@ const Library = ()=>{
             pb: 6,
           }}
         >
+        <Container
+         maxWidth='lg'>
+         <QuickFix />
+        </Container>
+
           <Container maxWidth="lg">
             <Typography
               component="h1"
