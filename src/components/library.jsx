@@ -1,4 +1,6 @@
-import * as React from 'react';
+import React, {useContext} from 'react';
+import AuthContext from '../store/auth-context';
+
 import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
 import CarRepairIcon from '@mui/icons-material/CarRepair';
@@ -24,7 +26,11 @@ import InputAdornment from '@mui/material/InputAdornment';
 
 
 
+
 function Copyright() {
+
+
+
   return (
     <Typography variant="body2" color="text.secondary" align="center">
       {'Copyright © '}
@@ -40,30 +46,21 @@ function Copyright() {
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const theme = createTheme();
-// import httpClient from "./httpClient";
 
 const Library = ()=>{
-//     const[user, setUser] = useState('');
-    
-//     const logoutUser = async ()=>{
-//         await httpClient.post("https://carmateserver.herokuapp.com/logout");
-//         window.location.href = "/";
-//     };
+  const authCtx = useContext(AuthContext);
+  const isLoggedIn = authCtx.isLoggedIn;
+  console.log(isLoggedIn);
+  const logoutHandler = ()=>{
+    authCtx.logout();
+    window.location.href='/';
+  }
 
-//     useEffect(()=>{
-//         (async ()=>{
-//             try{
-//                 const resp = await httpClient.get("https://carmateserver.herokuapp.com/@me")
-//                 setUser(resp.data)
-//             } catch(error){
-//                 console.log("Not authenticated");
-//             }
-//         })();
-//     }, []);
 
     return (
       <ThemeProvider theme={theme}>
-      <CssBaseline />
+        <div>
+        <CssBaseline />
       <AppBar position="relative">
         <Toolbar sx={{display:'flex', justifyContent:'space-between', alignContent:'center'}}>
           
@@ -72,6 +69,11 @@ const Library = ()=>{
             CarMate
           </Typography>
           <Box>
+          <button 
+          onClick={logoutHandler}
+          className='logoutButton'>
+          logout
+           </button>
           <ShoppingCartOutlinedIcon />
           <AccountCircleIcon sx={{ml:'10px'}} />
           </Box>
@@ -114,8 +116,10 @@ const Library = ()=>{
             </InputAdornment>
           }
         />
+       
 
             </Stack>
+
           </Container>
         </Box>
         <Container sx={{ py: 8 }} maxWidth="md">
@@ -171,33 +175,10 @@ const Library = ()=>{
         </Typography>
         <Copyright />
       </Box>
-
-      {/* End footer */}
-        {/* this is the authentication code */}
-          {/* <h1>CarMATE</h1>
-          {user != null ? (
-            <div>
-              <h2>Logged in</h2>
-              <h3>ID: {user.id}</h3>
-              <h3>Email: {user.email}</h3>
-    
-              <button onClick={logoutUser}>Logout</button>
-            </div>
-          ) : (
-            <div>
-              <p>You are not logged in</p>
-              <div>
-                <a href="/login">
-                  <button>Login</button>
-                </a>
-                <a href="/register">
-                  <button>Register</button>
-                </a>
-              </div>
-            </div>
-          )} */}
-
-
+        </div>
+      
+ 
+      
 
 
 

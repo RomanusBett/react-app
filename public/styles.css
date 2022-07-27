@@ -451,6 +451,18 @@ textarea{
 .submitbutton:active{
     transform: scale(0.9);
 }
+.logoutButton{
+    margin-right:1.1rem;
+    border-radius: 3px;
+}
+.logoutButton:hover{
+    transform: scale(1.1);
+    background-color: #0039a6;
+    color: white;
+}
+.logoutButton:active{
+    transform: scale(0.9);
+}
 
 @media (max-width: 1300px){
     .formInput1 input{
