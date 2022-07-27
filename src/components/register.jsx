@@ -6,6 +6,7 @@ const RegisterPage = ()=>{
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const authCtx = useContext(AuthContext);
+  const [buttonText, setButtonText]=useState('SUBMIT');
 
   function isValidEmail() {
     return /\S+@\S+\.\S+/.test(email);
@@ -13,6 +14,7 @@ const RegisterPage = ()=>{
 
 
   const handleChange = () => {
+    setButtonText('loading...')
     if (!isValidEmail(email)) {
       alert('Email is invalid');
     } else {
@@ -73,7 +75,7 @@ return (
       />
     </div>
     <button className="submitbutton" type="button" onClick={e=>handleChange()}>
-      SUBMIT
+      {buttonText}
     </button>
     <a href="/login">Already have an account?</a>
   </form>
