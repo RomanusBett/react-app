@@ -503,12 +503,14 @@ textarea{
 
 @media (max-width: 768px){
 .formInput1 input{
-    width: 70%;
+    width: 90%;
 }
 
 .login3form{
-    width: 90%;
+    width: 97%;
+    height: 65vh;
 }
+
 .functionServiceContainer{
     display: flex;
     flex-direction: column;
@@ -721,6 +723,9 @@ textarea{
     }
     .informationContainer{
         height: 200vh;
+    }
+    .login3form{
+        height: 80vh;
     }
    
 
