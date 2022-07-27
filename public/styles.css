@@ -6,6 +6,13 @@
     background-position: center;
     background-attachment: fixed;
 }
+.centered{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
 
 .mainContainerFilter{
     background-color: rgba(4, 1, 14, 0.7);
