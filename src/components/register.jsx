@@ -14,7 +14,6 @@ const RegisterPage = ()=>{
 
 
   const handleChange = () => {
-    setButtonText('loading...')
     if (!isValidEmail(email)) {
       alert('Email is invalid');
     } else {
@@ -41,12 +40,14 @@ const RegisterPage = ()=>{
             })
         }
     }).then((data) => {
+      setButtonText('loading...');
       const expirationTime = new Date(new Date().getTime()+ (+data.expiresIn*1000));
       authCtx.login(data.idToken, expirationTime.toISOString());
       window.location.href = '/library';
 
     }).catch((err)=>{
-        alert(err.message);
+      setButtonText('Submit');
+      alert(err.message);
     });
   };
   }

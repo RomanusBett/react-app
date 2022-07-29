@@ -1,7 +1,13 @@
 import React from "react";
 import Multiselect from "multiselect-react-dropdown";
+import { Container } from "@mui/material";
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
 
+
+const theme = createTheme();
 const QuickFix = () => {
+
     const carmateServices = {
         GasketReplacement:['Gear oil replacement', 'grinding noise when in 4wd', 'leaked fluid','output seal replacement','contaminated oil', 'leaking fluid', 'grinding noise on high speeds'],
         EngineDiagnosis:['Need to inspect the car'],
@@ -38,11 +44,16 @@ const QuickFix = () => {
 
     const typeService = ['QUICK FIXES', 'SUSPENSION SYSTEMS', 'MAJOR SERVICES', 'ENGINE CHECKS'];
 
-    const dataHeaders = ['Differential Gasket replacement', 'Engine Diagnostics', 'FrontWheel and Rackend', 'Differentials', 'BrakePads', 'Transmission fluid', 'Thermostat replacement', 'WaterPump replacement', 'Rear wheel drum']
-    console.log(dataHeaders.length);
+
+
     return(
-        <div>
+        <ThemeProvider theme={theme}>
+        <CssBaseline />
+ 
+        <Container maxWidth="lg" sx={{alignItems:'center'}}>
         <h3>Need a service, check below for your personalised service and our team will contact you</h3>
+        <div className="contactFormContainer">
+        </div>
         <h1>{typeService[0]}</h1>
         {Object.keys(carmateServices).map((key, index)=>{
           return( 
@@ -101,7 +112,8 @@ const QuickFix = () => {
                 Submit
             </button>
         </div> 
-        </div>
+        </Container>
+        </ThemeProvider>
     )
 }
 export default QuickFix;
