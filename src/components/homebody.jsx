@@ -1,8 +1,7 @@
 import React from 'react';
-import { Stack, AppBar, Toolbar, createTheme, Box, Typography, Button, ThemeProvider } from '@mui/material';
+import { Stack, createTheme, Box, Typography, Button, ThemeProvider } from '@mui/material';
 import { Link } from 'react-router-dom';
-import CarRepairIcon from '@mui/icons-material/CarRepair';
-import Navigation from './Navigation';
+
 import Information from './imformation';
 import Choice from './choice';
 import BuildIcon from '@mui/icons-material/Build';
@@ -10,6 +9,7 @@ import OtherService from './otherService';
 import ContactUs from './contactUs';
 import Socials from './socials';
 import Mycarousel from './carousel'
+import MainAppBar from './mainappBar';
 
 const theme = createTheme({
     palette: {
@@ -47,35 +47,12 @@ const HomeBody = () => {
                             height: '100vh',
 
                         }}>
-                        <AppBar position='absolute'>
-                            <Toolbar sx={{
-                                bgcolor: 'background.dark',
-                                position: 'fixed',
-                                width: '100%',
-                                height: 36,
-                                borderBottom: '1px solid black',
-                            }}>
-                                <div className='big-container'>
-                                    <div className='logoContainer'>
-                                        <Typography variant='h6' sx={{
-                                            display: 'flex',
-                                            color: 'background.light'
-
-                                        }}>
-                                            <CarRepairIcon fontSize='medium' sx={{
-                                                mt: 0.5,
-                                                mr: 0.5,
-                                                color: 'background.light'
-                                            }} />
-                                            CarMATE
-                                        </Typography>
-                                    </div>
-                                    <div>
-                                        <Navigation />
-                                    </div>
-                                </div>
-                            </Toolbar>
-                        </AppBar>
+                        <MainAppBar id1='#aboutus' header1='ABOUT US'
+                            id2='#services' header2='SERVICES'
+                            id3='#otherservices' header3='OTHER SERVICES'
+                            id4='#contactus' header4='CONTACT US'
+                        />
+                        
 
                         <div className='bodyContainer'>
                             <Typography component='h1' variant='h4' align='center' sx={{ fontWeight: 'bold', color: 'text.light' }} gutterBottom>

@@ -12,7 +12,7 @@ const LoginPage = ()=>{
     const authCtx = useContext(AuthContext);
 
     function loginUser(){
-        setButtonText('loading...');
+        
         fetch('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCTv42i6dYMpWZGYiogDxi5TBUEjVahLhY',
         {
             method: 'POST',
@@ -26,8 +26,10 @@ const LoginPage = ()=>{
             }
 
         }).then(response => {
+            
             if(response.ok){
                 return response.json();
+                
             }
             else{
                 return response.json().then(data =>{
@@ -36,11 +38,17 @@ const LoginPage = ()=>{
                 })
             }
         }).then((data) => {  
+            setButtonText('loading...');
             const expirationTime = new Date(new Date().getTime()+ (+data.expiresIn*1000));
        
             authCtx.login(data.idToken, expirationTime.toISOString());
-            window.location.replace('/library');
+            if(email==='mainadmin@gmail.com'){
+                window.location.replace('library/users/mainadmin');
+            }else{
+                window.location.replace('/library');
+            }
         }).catch((err)=>{
+            setButtonText('Submit');
             alert(err.message);
         });
         

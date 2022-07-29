@@ -382,6 +382,7 @@ textarea{
     color: #0039a6;
     font-family: sans-serif;
 }
+
 .formInput1{
     display: flex;
     justify-content: space-around;
@@ -450,6 +451,9 @@ textarea{
     color: #0039a6;
     
 }
+.mainappbar{
+    color: #0039a6;
+}
 .submitbutton:hover{
     background-color: #0039a6;
     color: white;
@@ -459,17 +463,27 @@ textarea{
     transform: scale(1);
 }
 .logoutButton{
-    margin-right:1.1rem;
     border-radius: 3px;
+    background-color: inherit;
+    color: #ffac33;
+    font-weight: bold;
+    border: .5px solid #ffac33;
+    height: 1.5rem;
 }
 .logoutButton:hover{
     transform: scale(1.1);
-    background-color: #0039a6;
-    color: white;
+    background-color: #ffac33;
+    color: #03002E;
 }
 .logoutButton:active{
     transform: scale(0.9);
 }
+.header{
+    background-color: #0039a6;
+}
+
+
+
 
 @media (max-width: 1300px){
     .formInput1 input{
