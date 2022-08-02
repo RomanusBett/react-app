@@ -1,7 +1,6 @@
 import React from 'react';
 import { Stack, createTheme, Box, Typography, Button, ThemeProvider } from '@mui/material';
 import { Link } from 'react-router-dom';
-
 import Information from './imformation';
 import Choice from './choice';
 import BuildIcon from '@mui/icons-material/Build';
@@ -10,6 +9,7 @@ import ContactUs from './contactUs';
 import Socials from './socials';
 import Mycarousel from './carousel'
 import MainAppBar from './mainappBar';
+import { Fragment } from 'react';
 
 const theme = createTheme({
     palette: {
@@ -36,6 +36,7 @@ const theme = createTheme({
 
 const HomeBody = () => {
     return (
+        <Fragment>
         <ThemeProvider theme={theme}>
             <div className='main_container'>
                 <div className='mainContainerFilter'>
@@ -138,6 +139,7 @@ const HomeBody = () => {
             </div>
             <Socials />
         </ThemeProvider>
+        </Fragment>
     )
 }
 
