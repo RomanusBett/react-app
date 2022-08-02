@@ -6,6 +6,9 @@
     background-position: center;
     background-attachment: fixed;
 }
+html{
+    scroll-behavior: smooth;
+}
 .centered{
     align-items: center;
     display: flex;
@@ -468,7 +471,9 @@ textarea{
     color: #ffac33;
     font-weight: bold;
     border: .5px solid #ffac33;
+    opacity: .9;
     height: 1.5rem;
+    margin-top: 10px;
 }
 .logoutButton:hover{
     transform: scale(1.1);
@@ -478,13 +483,52 @@ textarea{
 .logoutButton:active{
     transform: scale(0.9);
 }
+.headerp{
+    border-radius: 3px;
+    background-color: inherit;
+    color: #ffac33;
+    font-weight: bold;
+    height: 1.5rem;
+    border: 0px;
+    margin-top: 10px;
+    cursor: pointer;
+}
 .header{
     background-color: #0039a6;
 }
-
-
-
-
+.grid-container{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1rem;
+}
+.cardlayouts{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 33.33%;
+}
+.cardimage{
+    height: 100%;
+    width: 100%;
+}
+.cardData{
+ align-items: center;
+ text-align: center;
+}
+.loadingStatus{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0039a6;
+}
 @media (max-width: 1300px){
     .formInput1 input{
         width: 70%;

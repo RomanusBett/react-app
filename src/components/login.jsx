@@ -12,7 +12,7 @@ const LoginPage = ()=>{
     const authCtx = useContext(AuthContext);
 
     function loginUser(){
-        
+        setButtonText('loading...');
         fetch('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCTv42i6dYMpWZGYiogDxi5TBUEjVahLhY',
         {
             method: 'POST',
@@ -38,7 +38,6 @@ const LoginPage = ()=>{
                 })
             }
         }).then((data) => {  
-            setButtonText('loading...');
             const expirationTime = new Date(new Date().getTime()+ (+data.expiresIn*1000));
        
             authCtx.login(data.idToken, expirationTime.toISOString());

@@ -14,8 +14,10 @@ const RegisterPage = ()=>{
 
 
   const handleChange = () => {
+    setButtonText('loading...');
     if (!isValidEmail(email)) {
       alert('Email is invalid');
+      setButtonText('Submit');
     } else {
       fetch('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCTv42i6dYMpWZGYiogDxi5TBUEjVahLhY',
       {
@@ -40,7 +42,6 @@ const RegisterPage = ()=>{
             })
         }
     }).then((data) => {
-      setButtonText('loading...');
       const expirationTime = new Date(new Date().getTime()+ (+data.expiresIn*1000));
       authCtx.login(data.idToken, expirationTime.toISOString());
       window.location.href = '/library';
