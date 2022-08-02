@@ -100,14 +100,14 @@ const MainAppBar = (props) => {
                     <Typography variant='h6' sx={{
                         display: 'flex',
                         color: '#ffac33'
-
                     }}>
-                        <CarRepairIcon fontSize='medium' sx={{
-                            mt: 0.5,
-                            mr: 0.5,
-                            color: '#ffac33'
-                        }} />
-                        CarMATE
+                    <div className='logoDiv'>
+                    <img className='logoImg' src='logo.jpg' alt=''/>
+                    </div>
+                    <div className='maindivheader'>
+                    BrightMotions
+                    </div>
+                      
                     </Typography>
                 </div>
                 <div>

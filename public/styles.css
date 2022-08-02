@@ -6,6 +6,21 @@
     background-position: center;
     background-attachment: fixed;
 }
+.logoDiv{
+    display: inline-block;
+    border: 1px solid black;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.maindivheader{
+    margin-top: 10px;
+    margin-left: 5px;
+}
+.logoImg{
+    height: 3rem;
+    width: 3rem;
+    transform: scale(2);
+}
 html{
     scroll-behavior: smooth;
 }
@@ -386,6 +401,7 @@ textarea{
     font-family: sans-serif;
 }
 
+
 .formInput1{
     display: flex;
     justify-content: space-around;
@@ -570,7 +586,15 @@ textarea{
 .formInput1 input{
     width: 90%;
 }
-
+.logoImg{
+    height: 2rem;
+    width: 2.5rem;
+    transform: scale(2);
+}
+.maindivheader{
+    margin-top: 5px;
+    margin-left: 5px;
+}
 .login3form{
     width: 97%;
     height: 65vh;
