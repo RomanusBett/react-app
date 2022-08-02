@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import CarRepairIcon from '@mui/icons-material/CarRepair';
 import {AppBar, Toolbar, Typography} from '@mui/material';
 import styled from 'styled-components';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
