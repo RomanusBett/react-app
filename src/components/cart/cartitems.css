@@ -8,7 +8,6 @@
   li{
     color: black;
   }
-  
   .total {
     display: flex;
     justify-content: space-between;
@@ -49,3 +48,8 @@
     background-color: #ffac33;
     color: white;
   }
+  .actions .button:hover{
+    background-color: #0039a6;
+  }
+
+  
