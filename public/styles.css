@@ -545,6 +545,8 @@ textarea{
     align-items: center;
     color: #0039a6;
 }
+
+
 @media (max-width: 1300px){
     .formInput1 input{
         width: 70%;
