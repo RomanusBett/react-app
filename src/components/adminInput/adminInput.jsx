@@ -57,6 +57,7 @@ const AdminInput = () => {
             )}
             {formIsOpen && (
                 <form className="adminInputform">
+                <h3>CREATE A NEW ITEM FOR SALE</h3>
                     <div className="adminform12">
                         <label>Enter Item Name</label>
                         <input onChange={(e)=>setPartName(e.target.value)} type="text" placeholder="Enter Item Name" />
@@ -71,7 +72,7 @@ const AdminInput = () => {
                     </div>
                     <div className="adminButton">
                     <button className="openForm" onClick={closeForm} type="button">CLOSE</button>
-                    <button onClick={submitNewPartData} className="openForm close">Submit</button>
+                    <button onClick={submitNewPartData} className="openForm close">SUBMIT</button>
                     </div>
                 </form>
             )}

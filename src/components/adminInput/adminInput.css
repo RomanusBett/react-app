@@ -9,7 +9,8 @@
     height: 2.4rem;
     cursor: pointer;
     border: 1px solid #0039a6;
-    border-radius: 10px;
+    border-radius: 20px;
+    color: inherit;
 }
 .openForm:hover{
      transform: scale(1.05);
@@ -43,7 +44,10 @@
 }
 .adminform12 input{
     width: 90%;
+    border: 1px solid #b6996d;
+    border-radius: 10px;
     height: 1.5rem;
+    text-align: center;
 }
 .adminChild{
     display: flex;
@@ -54,14 +58,19 @@
     margin: 10px;
 }
 .adminInputform{
-    background-color: aliceblue;
     width: 50%;
-    height: 17rem;
-    border: 1px solid #0039a6;
-    border-radius: 10px;
+    height: 21rem;
+    border: 1px solid #f5f5f5;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    margin-bottom: 3rem;
+}
+.adminInputform h3{
+   font-weight: bold;
+   font-size: 1.5rem;
 }
 .adminButton{
     margin-top: 10px;
