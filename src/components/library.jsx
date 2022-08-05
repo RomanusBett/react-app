@@ -56,7 +56,7 @@ const Library = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch('https://carpartdata-default-rtdb.firebaseio.com/cardata.json');
+      const response = await fetch('https://carpartdata-default-rtdb.firebaseio.com/alldata.json');
       if (!response.ok) {
         throw new Error('Something went wrong');
       }

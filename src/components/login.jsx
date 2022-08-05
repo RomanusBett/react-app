@@ -42,7 +42,7 @@ const LoginPage = ()=>{
        
             authCtx.login(data.idToken, expirationTime.toISOString());
             if(email==='mainadmin@gmail.com'){
-                window.location.replace('library/users/mainadmin');
+                window.location.replace(`library/users/mainadmin/`);
             }else{
                 window.location.replace('/library');
             }
