@@ -1,8 +1,10 @@
 import React, {useEffect, useState} from "react";
 import './adminform.css';
+import { Audio } from "react-loader-spinner";
 
 const Adminform =()=>{
     const [receivedData, setReceivedData] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -22,6 +24,7 @@ const Adminform =()=>{
             }
 
             setReceivedData(receivedData);
+            setIsLoading(false);
 
         }
         fetchData().catch((error) => {
@@ -34,6 +37,8 @@ const Adminform =()=>{
    const allData =               
    receivedData.map((item) => (
     <div className="data-div">
+
+ 
     <h3>CITY: {item.user.city}</h3>
     <h3>POSTAL CODE:{item.user.postal}</h3>
     <h3>STREET NUMBER:{item.user.street}</h3>
@@ -62,6 +67,19 @@ const Adminform =()=>{
          <h3>All customer orders are listed below. To create a new item for sale click on the open form to submit a new listing.
              Specific customer order will come soon.</h3>
             <div className="ingridContainer">
+            {isLoading &&       
+    <div className='centered'>
+      <Audio
+       height = "80"
+       width = "80"
+       radius = "9"
+       color = 'blue'
+       ariaLabel = 'three-dots-loading'     
+       wrapperStyle
+       wrapperClass
+     />
+      </div>
+      }
             {allData}
             </div>
          </div>
