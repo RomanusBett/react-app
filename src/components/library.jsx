@@ -17,7 +17,7 @@ import HeaderCartButton from './LibraryCartIcon';
 import Cart from './cart/cart';
 import CartProvider from '../store/cartProvider';
 import AutoItems from './AutoItems.jsx/AutoItem';
-
+import RequestService from './requestService/requestService';
 
 
 
@@ -103,7 +103,7 @@ const Library = () => {
           <CssBaseline />
           <div className='header'>
             <MainAppBar
-              id2='/library/service' header2={<button className='headerp'>NEED A SERVICE</button>}
+              id2='#buyParts' header2={<button className='headerp'>BUY PARTS</button>}
               header3={<HeaderCartButton onShowCart={showCartHandler} />}
               header4={
                 <button
@@ -126,6 +126,8 @@ const Library = () => {
                 maxWidth='lg'>
               </Container>
 
+              <RequestService />
+
               <Container maxWidth="lg" sx={{ mt: '3rem' }}>
 
                 <Typography
@@ -134,8 +136,8 @@ const Library = () => {
                   align="center"
                   color="text.primary"
                   gutterBottom
+                  id='buyParts'
                 >
-
                   BUY PARTS
                 </Typography>
                 <Typography variant="h5" align="center" color="text.secondary" paragraph>

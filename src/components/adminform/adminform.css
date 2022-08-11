@@ -31,3 +31,18 @@
 .adminMaindiv h3{
    opacity: .8;
 }
+.perOrderedItems{
+    margin: 15px auto;
+}
+.clientOrderData-div h3{
+    color: #ffac33;
+}
+.clientOrderData-div{
+    border-top: 2px solid #0039a6;
+}
+.userData-div{
+    height: 15rem;
+}
+.item-name{
+    color: #0039a6;
+}
